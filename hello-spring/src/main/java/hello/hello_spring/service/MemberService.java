@@ -5,7 +5,12 @@ import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.domain.Member;
 
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
+
 
 public class MemberService {
     private final MemberRepository memberRepository;
@@ -16,7 +21,7 @@ public class MemberService {
         
         하지만 아래처럼 회원 서비스 코드를 DI 가능하게 변경한다.
      */
-
+    
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }

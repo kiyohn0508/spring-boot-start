@@ -4,6 +4,9 @@ import hello.hello_spring.domain.Member;
 
 import java.util.*;
 
+import org.springframework.stereotype.Repository;
+
+
 public class MemoryMemberRepository implements MemberRepository{
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
