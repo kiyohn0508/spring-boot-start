@@ -1,6 +1,5 @@
 package hello.hello_spring.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
@@ -8,7 +7,6 @@ import org.springframework.ui.Model;
 import hello.hello_spring.domain.Member;
 import hello.hello_spring.service.MemberService;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -18,7 +16,6 @@ public class MemberController{
 
     private final MemberService memberService;
 
-    @Autowired
     public MemberController(MemberService memberService){
         this.memberService = memberService;
     }
